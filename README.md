@@ -30,7 +30,7 @@ Transfer-Encoding: chunked
     },
 ]
 
-$ curl -i http://hostname:port/{ jwt token with `path` == 'some_song.mp3' }/
+$ curl -i http://localhost/{ jwt token with `path` == 'some_song.mp3' }/
 Content-Length: 7771843
 Content-Type: audio/mpeg
 Date: Sat, 19 Nov 2016 11:01:37 GMT
