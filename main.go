@@ -1,8 +1,7 @@
 package main
 
 import (
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/engine/standard"
+	"github.com/labstack/echo
 	"log"
 	"net/http"
 	"strconv"
@@ -58,5 +57,5 @@ func GetTorrentByToken(c echo.Context) error {
 func main() {
 	e := echo.New()
 	e.GET("/:token/", GetTorrentByToken)
-	e.Run(standard.New(":1323"))
+	e.Logger.Fatal(e.Start(":1323"))
 }
